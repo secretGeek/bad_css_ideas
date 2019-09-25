@@ -4,13 +4,6 @@
 <meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>Some bad css ideas.</title>
 <style>
-body {
-  max-width:70ch;
-  padding:2ch;
-  margin:auto;
-  color:#333;
-  font-size:1.2em;
-}
 .test {
  background-color:blue;
 }
@@ -31,15 +24,22 @@ body {
 p:empty {
   border:5px solid yellow;
 }
+p[style="border-color:red"] {
+ background-color:magenta;
+}
+p[style="background-color:magenta"] {
+ background-color:yellow !important;
+}
+
 </style>
 </head>
 <body>
 <p>View source to understand the crimes before you.</p>
 <p class='test'>this p has a class.</p>
-<p class='.class'>this p has a class that starts with a dot in the name</p>
+<p class='.class'>this p has a class that starts with a dot in the name.</p>
 <p id='#id'>this p has an id that starts with a hash.</p>
-<p class='.'>this p has a class that is just a dot</p>
-<p id='#'>this p has an id that is just a hash</p>
+<p class='.'>this p has a class that is just a dot.</p>
+<p id='#'>this p has an id that is just a hash.</p>
 <p></p>
 <p>^ The empty paragraph above was styled via the 'p:empty' selector.</p>
 <p> </p>
@@ -49,7 +49,22 @@ p:empty {
 <p> <!-- this paragraph contains a comment --> </p>
 <p>^ The empty paragraph contains a comment and some whitespace, and hence was not styled via the 'p:empty' selector.</p>
 
+<p style='border-color:red'>This paragraph is magenta because an inline style sets its border color to red. That's a bad thing that can happen.</p>
 
+
+<p style='background-color:magenta'>This paragraph is yellow because an inline style sets its background color to magenta. That's an even worse thing that can happen.</p>
+
+
+<style>
+/* via: https://jrl.ninja/etc/1/ */
+body {
+  max-width:70ch;
+  padding:2ch;
+  margin:auto;
+  color:#333;
+  font-size:1.2em;
+}
+</style>
 
 </body>
 </html>
