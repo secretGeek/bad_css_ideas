@@ -4,7 +4,7 @@
 <meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>Some bad css ideas.</title>
 <style>
-.test {
+.class {
  background-color:blue;
 }
 .\.class {
@@ -30,13 +30,19 @@ p[style="border-color:red"] {
 p[style="background-color:magenta"] {
  background-color:yellow !important;
 }
-
+p[💡=🙄]{
+ background-color:lightgray;
+}
+coffee☕{
+ background-color:lightblue;
+ display:block;
+}
 </style>
 </head>
 <body>
-<p>View source to understand the crimes before you.</p>
-<p class='test'>this p has a class.</p>
-<p class='.class'>this p has a class that starts with a dot in the name.</p>
+<p>💡 View source to understand the crimes before you.</p>
+<p class='class'>this p has a class of class.</p>
+<p class='.class'>this p has a class that starts with a dot.</p>
 <p id='#id'>this p has an id that starts with a hash.</p>
 <p class='.'>this p has a class that is just a dot.</p>
 <p id='#'>this p has an id that is just a hash.</p>
@@ -53,6 +59,13 @@ p[style="background-color:magenta"] {
 
 
 <p style='background-color:magenta'>This paragraph is yellow because an inline style sets its background color to magenta. That's an even worse thing that can happen.</p>
+<p 💡=🙄>This paragraph is selected by an attribute which is an emoji with a value that is a different emoji.</p>
+
+
+<coffee☕>This is a custom element named  coffee☕</coffee☕>
+
+<p id='☕'><a href='#☕'>this is a hyperlink to an element named with a ☕ emoji.</a> The emoji looks good in the address bar.</p>
+
 
 
 <style>
