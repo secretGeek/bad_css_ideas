@@ -6,6 +6,7 @@
 <style>
 .class {
  background-color:blue;
+ color:white;
 }
 .\.class {
   background-color:pink;
@@ -37,34 +38,41 @@ coffee☕{
  background-color:lightblue;
  display:block;
 }
+big🔥 {
+ background-color:lightblue;
+ display:block;
+}
 </style>
 </head>
 <body>
-<p>💡 View source to understand the crimes before you.</p>
-<p class='class'>this p has a class of class.</p>
-<p class='.class'>this p has a class that starts with a dot.</p>
-<p id='#id'>this p has an id that starts with a hash.</p>
-<p class='.'>this p has a class that is just a dot.</p>
-<p id='#'>this p has an id that is just a hash.</p>
+<p>💡 <code>View source</code> to understand the crimes before you.</p>
+<p class='class'>this <code>&lt;p&gt;</code> has a class of class.</p>
+<p class='.class'>this <code>&lt;p&gt;</code> has a class that starts with a dot.</p>
+<p id='#id'>this <code>&lt;p&gt;</code> has an id that starts with a hash.</p>
+<p class='.'>this <code>&lt;p&gt;</code> has a class that is just a dot.</p>
+<p id='#'>this <code>&lt;p&gt;</code> has an id that is just a hash.</p>
 <p></p>
 <p>^ The empty paragraph above was styled via the 'p:empty' selector.</p>
 <p> </p>
-<p>^ The empty paragraph above contains whitespace and hence was not styled via the 'p:empty' selector.</p>
+<p>^ The empty paragraph above contains whitespace and hence was <em>not</em> styled via the 'p:empty' selector.</p>
 <p><!-- this paragraph contains a comment --></p>
-<p>^ The empty paragraph contains a comment and no whitespace, and was styled via the 'p:empty' selector.</p>
-<p> <!-- this paragraph contains a comment --> </p>
-<p>^ The empty paragraph contains a comment and some whitespace, and hence was not styled via the 'p:empty' selector.</p>
+<p>^ The empty <code>&lt;p&gt;</code> above contains a comment and no whitespace, and was styled via the 'p:empty' selector.</p>
+<p> <!-- this paragraph contains a comment and some whitespace --> </p>
+<p>^ The empty <code>&lt;p&gt;</code> above contains a comment and some whitespace, and hence was <em>not</em> styled via the 'p:empty' selector.</p>
 
-<p style='border-color:red'>This paragraph is magenta because an inline style sets its border color to red. That's a bad thing that can happen.</p>
-
-
-<p style='background-color:magenta'>This paragraph is yellow because an inline style sets its background color to magenta. That's an even worse thing that can happen.</p>
-<p 💡=🙄>This paragraph is selected by an attribute which is an emoji with a value that is a different emoji.</p>
+<p style='border-color:red'>This <code>&lt;p&gt;</code> is magenta because an inline style sets its border color to red. That's a bad thing that can happen.</p>
 
 
-<coffee☕>This is a custom element named  coffee☕</coffee☕>
+<p style='background-color:magenta'>This <code>&lt;p&gt;</code> is yellow because an inline style sets its background color to magenta. That's an even worse thing that can happen.</p>
 
-<p id='☕'><a href='#☕'>this is a hyperlink to an element named with a ☕ emoji.</a> The emoji looks good in the address bar.</p>
+<p 💡=🙄>This <code>&lt;p&gt;</code> is selected by an attribute which is an emoji with a value that is a different emoji.</p>
+
+<coffee☕>This is a custom element named "coffee☕", as in:</coffee☕>
+
+<blockquote>&lt;coffee☕&gt;This is a custom element named "coffee☕", as in:&lt;/coffee☕&gt;</blockquote>
+
+
+<p id='☕'><a href='#☕'>this is a hyperlink to an element named with an id of "☕".</a> The emoji looks good in the address bar.</p>
 
 <p>Source: <a href='https://github.com/secretGeek/bad_css_ideas'>https://github.com/secretGeek/bad_css_ideas</a></p>
 
@@ -76,6 +84,8 @@ body {
   margin:auto;
   color:#333;
   font-size:1.2em;
+  outline:1px solid black;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 </style>
 
